@@ -120,5 +120,21 @@ include('delete.php');
                 }
                 ?>
          </div>
+         <div class="deleting">
+        <form method="GET">
+            <section class="historique">
+                <div class="histo">
+                    <h1> Historique utilisateur </h1>
+                    <input type="search" name="histoutilisateur" placeholder="ID de l'utilisateur">
+                    <input type="submit" name="envoi220">
+               
+                <?php
+                if (isset($deleteutilisateur) && $deleteutilisateur->rowCount() > 0) {
+                ?>
+                    <i>Suppression effectuée ! </i>
+                <?php
+                }
+                ?>
+         </div>
     </body>
 </html>
