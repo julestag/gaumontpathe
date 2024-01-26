@@ -163,13 +163,10 @@ include('searchbydate.php');
          <div class ="ajoutfilm">
          <label for="meeting-time">Date et heure de programmation : </label>
 
-    <input
-  type="datetime-local"
-  id="meeting-time"
-  name="time"
-  value="2024-01-12T19:30"
-  min="2023-06-07T00:00"
-  max="2050-06-14T00:00" />
+         <input type="date" id="start" name="time" value="01-01-2010" min="2000-01-01" max="2050-12-31" />
+         <input type="time" id="appt" name="time1" min="09:00" max="00:00" required />
+
+
   <br>
          <select name="room" class="select">
                     <option value="">select salle</option>
