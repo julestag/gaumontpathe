@@ -7,6 +7,7 @@ include('abonnement2.php');
 include('modif.php');
 include('creation.php');
 include('delete.php');
+include('historique.php');
 ?>
 
 <!DOCTYPE html>
@@ -129,11 +130,13 @@ include('delete.php');
                     <input type="submit" name="envoi220">
                
                 <?php
-                if (isset($deleteutilisateur) && $deleteutilisateur->rowCount() > 0) {
-                ?>
-                    <i>Suppression effectuée ! </i>
-                <?php
-                }
+                if (isset($historique1) && $historique1->rowCount() > 0) {
+                    while (($histo = $historique1->fetch())) {
+                        ?>
+                            <p><b>Titre film :</b><?= $histo['title'] ?> </p> <p><b> Date du visionnage :</b><?= $histo['date_begin']; ?></p> <p> ____________________________</p>
+                        <?php
+                            }
+                        }
                 ?>
          </div>
     </body>
