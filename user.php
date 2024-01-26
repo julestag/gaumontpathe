@@ -17,6 +17,8 @@ include('searchbydate.php');
 <head>
     <title>Administration cinema</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style2.css">
+
 </head>
 <body>
     <h1> Informations clients </h1>

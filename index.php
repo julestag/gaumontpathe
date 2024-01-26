@@ -12,12 +12,16 @@ include('genredistrib.php');
 <head>
     <title>Recherche des films</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="include.css">
+
 </head>
 <body>
+<img src="logo.png" alt="Logo HubSpot" width=10% height=10%/>
+
 <form method="GET">
         <input type="search" name="s" placeholder="Recherche un film">    
     <section class="afficher">
-            <input type="search" name="l" placeholder="Recherche un distributeur">
+            <input type="search" name="l" placeholder="Recherche un distributeur">​
         </form>
         <section class="afficher">
             <div class="sel">
