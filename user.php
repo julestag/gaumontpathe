@@ -8,6 +8,7 @@ include('modif.php');
 include('creation.php');
 include('delete.php');
 include('historique.php');
+include('add.php');
 ?>
 
 <!DOCTYPE html>
@@ -147,13 +148,62 @@ include('historique.php');
                             }
                         }
                         if (isset($historique2) && $historique2->rowCount() > 0) {
-                            while (($histo2 = $historique2->fetch())) {
                                 ?>
                                     <p>Ajout effectuée</p>
                                 <?php
                                     }
-                                }
                 ?>
          </div>
+                                </div>
+                                </div>
+                                <hr>
+                                <h1>Ajout d'une programmation</h1>
+                                <form method="GET">
+         <div class ="ajoutfilm">
+         <label for="meeting-time">Date et heure de programmation : </label>
+
+    <input
+  type="datetime-local"
+  id="meeting-time"
+  name="time"
+  value="2024-01-12T19:30"
+  min="2023-06-07T00:00"
+  max="2050-06-14T00:00" />
+  <br>
+         <select name="room" class="select">
+                    <option value="">select salle</option>
+                    <option value="1">Montana</option>
+                    <option value="2">Hightscore</option>
+                    <option value="3">Salle 3</option>
+                    <option value="4">Astek</option>
+                    <option value="5">Gecko</option>
+                    <option value="6">Azur</option>
+                    <option value="7">Toshiba</option>
+                    <option value="8">Salle 14</option>
+                    <option value="9">asus</option>
+                    <option value="10">salle 16</option>
+                    <option value="11">Microsoft</option>
+                </select>
+                <input type="search" name="idmoviee" placeholder="ID du film">
+                <input type="submit" name="envoiok2">
+                                </form>
+                <?php
+                if (isset($adding12) && $adding12->rowCount() > 0) {
+                                ?>
+                                    <p>Ajout effectuée</p>
+                                <?php
+                                    }
+                ?>
+            </div>
+<hr>
+            <div class="search">
+                <h1>Recherche de date de programmation<h1>
+            <input
+  type="datetime-local"
+  id="meeting-time"
+  name="time2"
+  value="2024-01-12T19:30"
+  min="2023-06-07T00:00"
+  max="2050-06-14T00:00" />
     </body>
 </html>

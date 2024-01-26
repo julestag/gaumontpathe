@@ -47,7 +47,7 @@ include('genredistrib.php');
             if (isset($distrib_search) && $distrib_search->rowCount() > 0) {
                 while ($dis = $distrib_search->fetch()) {
                     ?>
-                    <p><?= $dis['title']; ?></p>
+                    <p><?= $dis['title']; $dis['id'] ?></p><p>_______________</p>
                     <?php
                 }
             }
@@ -55,7 +55,8 @@ include('genredistrib.php');
 
                 while ($movie = $all_movies->fetch()) {
                     ?>
-                    <p><?= $movie['title']; ?></p>
+                    <p><?= $movie['title']; $movie['id'] ?></p><p>_______________</p>
+
                     <?php
                 }
             }
@@ -63,21 +64,23 @@ include('genredistrib.php');
 
                 while ($genr = $genre_search->fetch()) {
                     ?>
-                    <p><?= $genr['title']; ?></p>
+                 <p><?= $genr['title']; $genr['id'] ?></p><p>_______________</p>
+
                     <?php
                 }
             }
                 if (isset($genremovie) && $genremovie->rowCount() > 0) {
                     while ($caca = $genremovie->fetch()) {
                         ?>
-                        <p><?= $caca['title']; ?></p>
+                    <p><?= $caca['title']; $caca['id'] ?></p><p>_______________</p>
+
                         <?php
                     }
                 }
                 if (isset($distribmovie) && $distribmovie->rowCount() > 0) {
                     while ($lala = $distribmovie->fetch()) {
                         ?>
-                        <p><?= $lala['title']; ?></p>
+                        <p><?= $lala['title']; $lala['id'] ?></p><p>_______________</p>?></p>
                         <?php
                     }
                 }

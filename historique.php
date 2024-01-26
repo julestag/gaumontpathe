@@ -7,6 +7,6 @@ if (!empty($_GET['histoutilisateur'])) {
 if (!empty($_GET['addutil']) && !empty($_GET['addmov'])) {
     $addutil = htmlspecialchars($_GET['addutil']);
     $addmov = htmlspecialchars($_GET['addmov']);
-    $historique2 = $bdd->query("INSERT INTO membership_log VALUES ('$addutil', '$addmov')");
+    $historique2 = $bdd->query("INSERT INTO membership_log VALUES ($addutil, $addmov)");
 }
 ?>
