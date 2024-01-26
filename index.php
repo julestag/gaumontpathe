@@ -47,7 +47,7 @@ include('genredistrib.php');
             if (isset($distrib_search) && $distrib_search->rowCount() > 0) {
                 while ($dis = $distrib_search->fetch()) {
                     ?>
-                    <p><?= $dis['title']; $dis['id'] ?></p><p>_______________</p>
+            <p><b>Titre :</b><?= $dis['title'] ?> </p> <p><b> ID film:</b><?= $dis['id']; ?></p> <p> ____________________________</p>
                     <?php
                 }
             }
@@ -55,7 +55,7 @@ include('genredistrib.php');
 
                 while ($movie = $all_movies->fetch()) {
                     ?>
-                    <p><?= $movie['title']; $movie['id'] ?></p><p>_______________</p>
+            <p><b>Titre :</b><?= $movie['title'] ?> </p> <p><b> ID film :</b><?= $movie['id']; ?></p> <p> ____________________________</p>
 
                     <?php
                 }
@@ -64,7 +64,7 @@ include('genredistrib.php');
 
                 while ($genr = $genre_search->fetch()) {
                     ?>
-                 <p><?= $genr['title']; $genr['id'] ?></p><p>_______________</p>
+            <p><b>Titre :</b><?= $genr['title'] ?> </p> <p><b> ID film:</b><?= $genr['id']; ?></p> <p> ____________________________</p>
 
                     <?php
                 }
@@ -72,7 +72,7 @@ include('genredistrib.php');
                 if (isset($genremovie) && $genremovie->rowCount() > 0) {
                     while ($caca = $genremovie->fetch()) {
                         ?>
-                    <p><?= $caca['title']; $caca['id'] ?></p><p>_______________</p>
+            <p><b>Titre :</b><?= $caca['title'] ?> </p> <p><b> ID film:</b><?= $caca['id']; ?></p> <p> ____________________________</p>
 
                         <?php
                     }
@@ -80,7 +80,7 @@ include('genredistrib.php');
                 if (isset($distribmovie) && $distribmovie->rowCount() > 0) {
                     while ($lala = $distribmovie->fetch()) {
                         ?>
-                        <p><?= $lala['title']; $lala['id'] ?></p><p>_______________</p>?></p>
+            <p><b>Titre :</b><?= $lala['title'] ?> </p> <p><b> ID film:</b><?= $lala['id']; ?></p> <p> ____________________________</p>
                         <?php
                     }
                 }

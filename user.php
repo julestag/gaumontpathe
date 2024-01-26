@@ -9,6 +9,7 @@ include('creation.php');
 include('delete.php');
 include('historique.php');
 include('add.php');
+include('searchbydate.php');
 ?>
 
 <!DOCTYPE html>
@@ -194,16 +195,27 @@ include('add.php');
                                 <?php
                                     }
                 ?>
-            </div>
+                </div>
+                                </div>
 <hr>
             <div class="search">
-                <h1>Recherche de date de programmation<h1>
-            <input
-  type="datetime-local"
-  id="meeting-time"
-  name="time2"
-  value="2024-01-12T19:30"
-  min="2023-06-07T00:00"
-  max="2050-06-14T00:00" />
+            <h1>Recherche de date de programmation<h1>
+                    <form method="GET">
+                    <input type="date" id="start" name="time2" value="01-01-2010" min="2000-01-01" max="2050-12-31" />
+  <input type="submit" name="envoiok29">
+                                </form>
+                                <div class="ecris">
+                                <?php
+                                if (isset($search23) && $search23->rowCount() > 0) {
+                    while (($lol1 = $search23->fetch())) {
+                        ?>
+                            <p><b>Titre film :</b><?= $lol1['title'] ?> </p> <p><b> Date du visionnage :</b><?= $lol1['date_begin']; ?></p> <p> ____________________________</p>
+                        <?php
+                            }
+                        }
+                        ?>
+                        </div>
+                    </div>
+
     </body>
 </html>
