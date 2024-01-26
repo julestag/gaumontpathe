@@ -105,6 +105,8 @@ include('historique.php');
                 }
                 ?>
          </div>
+         </div>
+         <hr>
          <div class="deleting">
         <form method="GET">
             <section class="delete">
@@ -121,6 +123,8 @@ include('historique.php');
                 }
                 ?>
          </div>
+         <hr>
+            </div>
          <div class="deleting">
         <form method="GET">
             <section class="historique">
@@ -128,6 +132,11 @@ include('historique.php');
                     <h1> Historique utilisateur </h1>
                     <input type="search" name="histoutilisateur" placeholder="ID de l'utilisateur">
                     <input type="submit" name="envoi220">
+                    <h1> Ajouter dans l'historique </h1>
+                    <input type="search" name="addutil" placeholder="ID de l'utilisateur">
+                    <input type="search" name="addmov" placeholder="ID du schedule movie">
+                    <input type="submit" name="envoi221">
+            </form>
                
                 <?php
                 if (isset($historique1) && $historique1->rowCount() > 0) {
@@ -137,6 +146,13 @@ include('historique.php');
                         <?php
                             }
                         }
+                        if (isset($historique2) && $historique2->rowCount() > 0) {
+                            while (($histo2 = $historique2->fetch())) {
+                                ?>
+                                    <p>Ajout effectuée</p>
+                                <?php
+                                    }
+                                }
                 ?>
          </div>
     </body>
